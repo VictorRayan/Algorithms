@@ -47,7 +47,6 @@ int main(){
                 print_excp(0,j, false);
                 cout << tens[j]<<"\n";
 
-
                 for(int i=0; i < t_len; i++){
                                 cout << "["<<(index+1)<<"]:  ";
 
@@ -56,6 +55,12 @@ int main(){
                                 }else{
                                         cout << unit[i];
                                 }
+				
+				string str_index =  to_string(index+1);
+				if(str_index.substr(1,1)=="1" && (index+1)!=21){
+					cout << unit[i];
+				}
+				
                                 cout << tens[j] << "\n";
                                 index++;
 
