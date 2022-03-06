@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*string unit[] = {"unit1_", "unit2_ ", "unit3_"};
-string tens[] = {"tens1_", "tens_2", "tens_3"};
-*/
-
 string first_values[] = {"met", "et", "prop", "but", "pent", "hex", "hept", "oct",
                         "non", "dec", "undec", "dodec", "tridec", "tetradec", "pentadec", "hexadec",
                         "heptadec", "octadec", "nonadec"};
@@ -16,7 +12,7 @@ int u_len = sizeof(unit)/sizeof(*unit);
 int t_len = sizeof(unit)/sizeof(*unit);
 int f_len = sizeof(first_values)/sizeof(*first_values);
 
-
+//this function handles naming excesses
 void print_excp(int u_index, int t_index, bool use_u){
 
         if(t_index == 0 && use_u==false){
@@ -34,7 +30,7 @@ int main(){
         //Prints the first 19 non-standard values:
         cout << "Non-standard values: \n";
         for(int i=0; i < f_len; i++){
-                cout << "["<< i <<"]:  " << first_values[i] <<"\n";
+                cout << "["<< i+1 <<"]:  " << first_values[i] <<"\n";
         }
 
 
@@ -64,9 +60,7 @@ int main(){
                                 cout << tens[j] << "\n";
                                 index++;
 
-
                 }
-
                 j++;
                 index++;
 
