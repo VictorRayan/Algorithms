@@ -2,6 +2,7 @@ import random
 import time
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 #Count numbers verification
 count_numbers = 0
@@ -90,7 +91,7 @@ df = pd.DataFrame({'N_algarismos':list_alg_qnt, 'runtime':list_runtime})
 #VEMOS QUE NO GRAFICO OS PONTOS ESTÃO ALINHADOS COM A LINHA
 #CORRELAÇÃO POSITIVA DETECTADA - PONTOS AUMENTAM ASSIM COMO A LINHA
 sns.regplot(x="N_algarismos", y="runtime", data=df)
-
+plt.savefig('save_as_a_png.png')
 
 
 #DESCRIÇAÕ DO GRAFICO 
